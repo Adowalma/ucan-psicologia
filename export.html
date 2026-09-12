@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary-container": "#fb922a", "surface-container-highest": "#dce2f7", "outline": "#847561", "on-tertiary-fixed": "#2f1500", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#534600", "on-primary-fixed": "#281800", "on-error": "#ffffff", "inverse-primary": "#ffba44", "primary-container": "#e59e0b", "surface-container": "#e9edff", "outline-variant": "#d6c4ad", "on-surface": "#141b2b", "secondary-fixed": "#f9e287", "on-error-container": "#93000a", "surface": "#f9f9ff", "secondary-fixed-dim": "#dcc66e", "on-secondary": "#ffffff", "on-primary-fixed-variant": "#614000", "secondary-container": "#f6df84", "inverse-on-surface": "#edf0ff", "tertiary-fixed-dim": "#ffb77d", "on-tertiary": "#ffffff", "on-secondary-container": "#726212", "primary-fixed": "#ffddaf", "surface-tint": "#805600", "primary": "#805600", "surface-container-low": "#f1f3ff", "surface-bright": "#f9f9ff", "on-surface-variant": "#514534", "error": "#ba1a1a", "surface-container-high": "#e1e8fd", "tertiary": "#904d00", "surface-variant": "#dce2f7", "tertiary-fixed": "#ffdcc3", "on-background": "#141b2b", "on-primary": "#ffffff", "primary-fixed-dim": "#ffba44", "surface-dim": "#d3daef", "on-tertiary-fixed-variant": "#6e3900", "secondary": "#6e5e0d", "inverse-surface": "#293040", "background": "#f9f9ff", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#643300", "on-secondary-fixed": "#221b00", "on-primary-container": "#583a00" }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" }, spacing: { "gutter-desktop": "1.5rem", "space-xl": "2rem", margin: "1rem", "space-sm": "0.5rem", gutter: "1rem", "space-xs": "0.25rem", "space-lg": "1.25rem", "space-md": "0.75rem", "margin-desktop": "2.5rem" }, fontFamily: { "body-sm": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, fontSize: { "body-sm": ["12px", { lineHeight: "18px", fontWeight: "500" }], "headline-xl-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "800" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "500" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-md": ["18px", { lineHeight: "26px", letterSpacing: "0.02em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.03em", fontWeight: "700" }], "headline-xl": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "800" }], "headline-lg": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "800" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "700" }] } } } };</script>
+</head>
+
+<body class="bg-background font-body-md text-body-md text-on-surface">
+  <header
+    class="fixed top-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-16 max-w-[1140px] mx-auto px-gutter-desktop flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-md">
+        <div class="w-14 h-14 rounded flex items-center justify-center"> <img src="images/logo.jpg" alt=""></div>
+        <div class="flex flex-col"><span
+            class="font-headline-md text-headline-md text-on-surface leading-tight">Laboratório de Psicologia</span>
+          <div class="flex items-center gap-space-xs">
+            <span class="font-label-sm text-label-sm text-on-surface-variant">Universidade Católica</span>
+            <span class="inline-block w-1.5 h-1.5 rounded-full bg-primary"></span><span
+              class="font-label-sm text-label-sm text-primary uppercase font-bold">Serviço Gratuito</span>
+          </div>
+        </div>
+      </div>
+      <nav class="flex items-center gap-space-xs bg-surface-container-low p-space-xs rounded-lg"
+        data-active-classes="bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded px-space-md py-space-xs">
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded transition-colors"
+          data-path="escala-publica" href="index.html">Escala Pública</a><a
+          class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded transition-colors"
+          data-path="edicao-da-escala" href="admin.html">Edição da Escala (Admin)</a><a aria-current="page"
+          class="transition-colors bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded px-space-md py-space-xs"
+          data-path="exportar-redes-sociais" href="#">Exportar / Redes Sociais</a>
+      </nav>
+      <div class="flex items-center gap-space-md">
+        <div class="hidden md:flex flex-col items-end"><span
+            class="font-label-sm text-label-sm text-on-surface-variant uppercase">Apoio Imediato</span><span
+            class="font-label-md text-label-md text-tertiary">923 820 314</span></div>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="w-full pt-16 bg-background min-h-screen">
+    <div class="flex flex-col w-full">
+      <!-- Interactive Export Toolbar -->
+      <section class="w-full bg-surface-container-lowest shadow-sm py-space-md mb-space-xl">
+        <div
+          class="max-w-[1140px] mx-auto px-gutter-desktop flex flex-col lg:flex-row items-center justify-between gap-space-md">
+          <div class="flex items-center gap-space-md w-full lg:w-auto">
+            <div class="p-space-xs bg-surface-container rounded-lg flex items-center">
+              <button
+                class="px-space-md py-space-xs rounded font-label-md text-label-md transition-all bg-primary-container text-on-primary-container shadow-sm flex items-center gap-space-xs"
+                id="tab-social" onclick="switchFormat('social')">
+                <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+                Redes Sociais (PNG 4K)
+              </button>
+              <button
+                class="px-space-md py-space-xs rounded font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-space-xs"
+                id="tab-print" onclick="switchFormat('print')">
+                <span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+                Cartaz A4 Mural (PDF)
+              </button>
+            </div>
+            <!-- <div
+              class="hidden sm:flex items-center gap-space-xs px-space-md py-space-xs rounded bg-surface-container-low text-on-surface-variant">
+              <span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+              <span class="font-label-sm text-label-sm uppercase font-bold">Resolução 300 DPI</span>
+            </div> -->
+          </div>
+          <div class="flex flex-wrap items-center gap-space-sm w-full lg:w-auto justify-end">
+            <button
+              class="px-space-md py-space-sm rounded bg-primary-container hover:bg-inverse-primary text-on-primary-container font-label-md text-label-md transition-all flex items-center gap-space-xs shadow-sm active:scale-95"
+              onclick="downloadPNG()">
+              <span class="material-symbols-outlined text-[20px]">download</span>
+              <span>Descarregar Imagem PNG</span>
+            </button>
+            <button
+              class="px-space-md py-space-sm rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all flex items-center gap-space-xs shadow-sm active:scale-95"
+              onclick="downloadPDF()">
+              <span class="material-symbols-outlined text-[20px]">print</span>
+              <span>Descarregar PDF A4</span>
+            </button>
+            <a class="px-space-md py-space-sm rounded bg-surface-container-low hover:bg-secondary-container text-on-surface font-label-md text-label-md transition-all flex items-center gap-space-xs"
+              href="https://api.whatsapp.com/send?text=Atendimento%20Psicol%C3%B3gico%20Gratuito%20Online%20-%20Universidade%20Cat%C3%B3lica%20de%20Angola.%20Consulte%20a%20escala%20actualizada%20de%20Abril."
+              target="_blank">
+              <span class="material-symbols-outlined text-primary text-[20px]">share</span>
+              <span>Partilhar no WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Live Canvas Stage / Artboard Wrapper -->
+      <section class="w-full pb-space-xl flex flex-col items-center">
+        <div class="max-w-[1140px] w-full px-gutter-desktop flex flex-col items-center">
+          <!-- Subtle Format Metadata Header -->
+          <div class="w-full flex items-center justify-between text-on-surface-variant mb-space-sm px-space-xs">
+            <div class="flex items-center gap-space-xs">
+              <span class="material-symbols-outlined text-[16px] text-primary">visibility</span>
+              <span class="font-label-sm text-label-sm uppercase tracking-wider">Arte Final Pronta para Divulgação
+                Pública</span>
+            </div>
+            <span class="font-label-sm text-label-sm font-mono" id="canvas-aspect-hint">Formato: 1080 x 1080px
+              (Instagram / Post)</span>
+          </div>
+          <!-- THE CANONICAL INSTITUTIONAL POSTER ARTWORK (Pixel-precise modern replica) -->
+          <div
+            class="relative w-full max-w-[880px] bg-surface-container-lowest shadow-2xl rounded-none p-6 sm:p-10 md:p-14 overflow-hidden transition-all duration-300"
+            id="exportable-artboard">
+            <!-- Background Halftone Accent Motif - Top Right -->
+            <div
+              class="absolute top-0 right-0 w-48 h-56 pointer-events-none opacity-85 z-0 flex items-start justify-end overflow-hidden">
+              <svg class="text-primary-container" fill="none" height="220" viewBox="0 0 190 220" width="190"
+                xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <pattern height="16" id="halftone-dots" patternUnits="userSpaceOnUse" width="16" x="0" y="0">
+                    <circle cx="8" cy="8" fill="currentColor" opacity="0.95" r="4.5"></circle>
+                  </pattern>
+                </defs>
+                <rect fill="url(#halftone-dots)" height="220" width="190"></rect>
+              </svg>
+            </div>
+            <!-- Background Halftone Accent Motif - Bottom Left -->
+            <div class="absolute -bottom-4 -left-4 w-44 h-48 pointer-events-none opacity-85 z-0 overflow-hidden">
+              <svg class="text-primary-container" fill="none" height="190" viewBox="0 0 180 190" width="180"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect fill="url(#halftone-dots)" height="190" width="180"></rect>
+              </svg>
+            </div>
+            <!-- Organic Yellow Arc Wave Decoration (Lower Right Edge) -->
+            <div class="absolute -bottom-10 right-0 w-64 h-64 pointer-events-none opacity-30 z-0">
+              <svg class="w-full h-full text-primary-container" fill="none" viewBox="0 0 200 200"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M 200 40 C 130 60 70 120 70 200 L 200 200 Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <!-- Inner Content Flow -->
+            <div class="relative z-10 flex flex-col w-full">
+              <!-- Master Title Header -->
+              <div class="text-center w-full mb-space-md">
+                <h1 class="font-headline-xl text-headline-xl text-on-surface font-extrabold uppercase tracking-tight">
+                  Atendimento Psicológico Gratuito Online
+                </h1>
+              </div>
+              <!-- Institutional Explanatory Paragraph -->
+              <div class="max-w-[760px] mx-auto text-center mb-space-lg">
+                <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                  O Laboratório de Psicologia da Universidade Católica de Angola disponibiliza consultas de psicologia
+                  gratuitas. Os interessados devem contactar, via WhatsApp, os profissionais nos horários indicados na
+                  escala abaixo. A escala é actualizada mensalmente.
+                </p>
+              </div>
+              <!-- Master Golden Banner Ribbon -->
+              <div class="w-full bg-primary-container rounded-t-sm py-space-sm px-space-md text-center shadow-sm">
+                <p
+                  class="font-headline-md text-headline-md text-on-primary-container font-extrabold uppercase tracking-wide">
+                  Escala Referente ao Mês de Abril de 2026
+                </p>
+              </div>
+              <!-- Structured Schedule Grid (Exact match of layout, typography and duty rosters) -->
+              <div class="w-full bg-surface-container-lowest shadow-md rounded-b-sm overflow-x-auto">
+                <table class="w-full border-collapse text-center table-fixed min-w-[620px]">
+                  <thead>
+                    <tr class="bg-secondary-container text-on-secondary-container">
+                      <th
+                        class="py-space-sm px-space-xs font-label-lg text-label-lg uppercase tracking-wide w-[18%] bg-secondary-fixed">
+                        Horários
+                      </th>
+                      <th class="py-space-sm px-space-xs font-label-lg text-label-lg uppercase tracking-wide w-[16.4%]">
+                        Segunda
+                      </th>
+                      <th class="py-space-sm px-space-xs font-label-lg text-label-lg uppercase tracking-wide w-[16.4%]">
+                        Terça
+                      </th>
+                      <th class="py-space-sm px-space-xs font-label-lg text-label-lg uppercase tracking-wide w-[16.4%]">
+                        Quarta
+                      </th>
+                      <th class="py-space-sm px-space-xs font-label-lg text-label-lg uppercase tracking-wide w-[16.4%]">
+                        Quinta
+                      </th>
+                      <th class="py-space-sm px-space-xs font-label-lg text-label-lg uppercase tracking-wide w-[16.4%]">
+                        Sexta
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-on-surface">
+                    <!-- Slot: 08h às 10h -->
+                    <tr class="hover:bg-surface-container-low transition-colors">
+                      <td
+                        class="py-space-sm px-space-xs bg-secondary-fixed-dim/30 font-headline-md text-headline-md font-bold">
+                        08h às 10h
+                      </td>
+                      <td
+                        class="py-space-sm px-space-xs font-body-lg text-body-lg font-semibold text-on-surface-variant">
+                        -</td>
+                      <td
+                        class="py-space-sm px-space-xs font-body-lg text-body-lg font-semibold text-on-surface-variant">
+                        -</td>
+                      <td
+                        class="py-space-sm px-space-xs font-body-lg text-body-lg font-semibold text-on-surface-variant">
+                        -</td>
+                      <td
+                        class="py-space-sm px-space-xs font-body-lg text-body-lg font-semibold text-on-surface-variant">
+                        -</td>
+                      <td class="py-space-sm px-space-xs">
+                        <a class="block font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                          href="https://wa.me/244947031237" target="_blank">
+                          947 031 237
+                        </a>
+                      </td>
+                    </tr>
+                    <!-- Slot: 10h às 12h (Multi-attendant prime block) -->
+                    <tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                      <td
+                        class="py-space-sm px-space-xs bg-secondary-fixed-dim/30 font-headline-md text-headline-md font-bold">
+                        10h às 12h
+                      </td>
+                      <td class="py-space-sm px-space-xs">
+                        <div class="flex flex-col gap-0.5">
+                          <a class="font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                            href="https://wa.me/244932458408" target="_blank">932 458 408</a>
+                          <a class="font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                            href="https://wa.me/244992453810" target="_blank">992 453 810</a>
+                          <a class="font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                            href="https://wa.me/244949014143" target="_blank">949 014 143</a>
+                        </div>
+                      </td>
+                      <td class="py-space-sm px-space-xs">
+                        <a class="font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                          href="https://wa.me/244933592553" target="_blank">933 592 553</a>
+                      </td>
+                      <td class="py-space-sm px-space-xs">
+                        <div class="flex flex-col gap-0.5">
+                          <a class="font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                            href="https://wa.me/244938355088" target="_blank">938 355 088</a>
+                          <a class="font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                            href="https://wa.me/244992453810" target="_blank">992 453 810</a>
+                          <a class="font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                            href="https://wa.me/244949014143" target="_blank">949 014 143</a>
+                        </div>
+                      </td>
+                      <td class="py-space-sm px-space-xs">
+                        <div class="flex flex-col gap-0.5">
+                          <a class="font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                            href="https://wa.me/244926215874" target="_blank">926 215 874</a>
+                          <a class="font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                            href="https://wa.me/244933592553" target="_blank">933 592 553</a>
+                          <a class="font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                            href="https://wa.me/244974537974" target="_blank">974 537 974</a>
+                        </div>
+                      </td>
+                      <td class="py-space-sm px-space-xs">
+                        <div class="flex flex-col gap-0.5">
+                          <a class="font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                            href="https://wa.me/244947031237" target="_blank">947 031 237</a>
+                          <a class="font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                            href="https://wa.me/244949014143" target="_blank">949 014 143</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- Slot: 12h às 14h -->
+                    <tr class="hover:bg-surface-container-low transition-colors">
+                      <td
+                        class="py-space-sm px-space-xs bg-secondary-fixed-dim/30 font-headline-md text-headline-md font-bold">
+                        12h às 14h
+                      </td>
+                      <td
+                        class="py-space-sm px-space-xs font-body-lg text-body-lg font-semibold text-on-surface-variant">
+                        -</td>
+                      <td
+                        class="py-space-sm px-space-xs font-body-lg text-body-lg font-semibold text-on-surface-variant">
+                        -</td>
+                      <td
+                        class="py-space-sm px-space-xs font-body-lg text-body-lg font-semibold text-on-surface-variant">
+                        -</td>
+                      <td
+                        class="py-space-sm px-space-xs font-body-lg text-body-lg font-semibold text-on-surface-variant">
+                        -</td>
+                      <td
+                        class="py-space-sm px-space-xs font-body-lg text-body-lg font-semibold text-on-surface-variant">
+                        -</td>
+                    </tr>
+                    <!-- Slot: 14h às 16h -->
+                    <tr class="hover:bg-surface-container-low transition-colors">
+                      <td
+                        class="py-space-sm px-space-xs bg-secondary-fixed-dim/30 font-headline-md text-headline-md font-bold">
+                        14h às 16h
+                      </td>
+                      <td
+                        class="py-space-sm px-space-xs font-body-lg text-body-lg font-semibold text-on-surface-variant">
+                        -</td>
+                      <td
+                        class="py-space-sm px-space-xs font-body-lg text-body-lg font-semibold text-on-surface-variant">
+                        -</td>
+                      <td
+                        class="py-space-sm px-space-xs font-body-lg text-body-lg font-semibold text-on-surface-variant">
+                        -</td>
+                      <td
+                        class="py-space-sm px-space-xs font-body-lg text-body-lg font-semibold text-on-surface-variant">
+                        -</td>
+                      <td class="py-space-sm px-space-xs">
+                        <a class="block font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                          href="https://wa.me/244938355088" target="_blank">
+                          938 355 088
+                        </a>
+                      </td>
+                    </tr>
+                    <!-- Slot: 16h às 18h -->
+                    <tr class="hover:bg-surface-container-low transition-colors">
+                      <td
+                        class="py-space-sm px-space-xs bg-secondary-fixed-dim/30 font-headline-md text-headline-md font-bold">
+                        16h às 18h
+                      </td>
+                      <td
+                        class="py-space-sm px-space-xs font-body-lg text-body-lg font-semibold text-on-surface-variant">
+                        -</td>
+                      <td
+                        class="py-space-sm px-space-xs font-body-lg text-body-lg font-semibold text-on-surface-variant">
+                        -</td>
+                      <td
+                        class="py-space-sm px-space-xs font-body-lg text-body-lg font-semibold text-on-surface-variant">
+                        -</td>
+                      <td
+                        class="py-space-sm px-space-xs font-body-lg text-body-lg font-semibold text-on-surface-variant">
+                        -</td>
+                      <td class="py-space-sm px-space-xs">
+                        <a class="block font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                          href="https://wa.me/244926215874" target="_blank">
+                          926 215 874
+                        </a>
+                      </td>
+                    </tr>
+                    <!-- Slot: 18h às 20h (Unified duty across all 5 weekdays) -->
+                    <tr class="hover:bg-surface-container-low transition-colors">
+                      <td
+                        class="py-space-sm px-space-xs bg-secondary-fixed-dim/30 font-headline-md text-headline-md font-bold">
+                        18h às 20h
+                      </td>
+                      <td class="py-space-sm px-space-xs">
+                        <a class="block font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                          href="https://wa.me/244936787231" target="_blank">936 787 231</a>
+                      </td>
+                      <td class="py-space-sm px-space-xs">
+                        <a class="block font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                          href="https://wa.me/244936787231" target="_blank">936 787 231</a>
+                      </td>
+                      <td class="py-space-sm px-space-xs">
+                        <a class="block font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                          href="https://wa.me/244936787231" target="_blank">936 787 231</a>
+                      </td>
+                      <td class="py-space-sm px-space-xs">
+                        <a class="block font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                          href="https://wa.me/244936787231" target="_blank">936 787 231</a>
+                      </td>
+                      <td class="py-space-sm px-space-xs">
+                        <a class="block font-label-md text-label-md font-bold text-on-surface hover:text-primary hover:underline"
+                          href="https://wa.me/244936787231" target="_blank">936 787 231</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- Bottom Institutional Footer Notice Blocks -->
+              <div
+                class="mt-space-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md pt-space-sm">
+                <!-- Left: Emblem / Laboratory Brand -->
+                <div class="flex items-center gap-space-md">
+                  <div class="w-[82px] h-[82px] rounded-full flex items-center justify-center p-2">
+                    <div class="w-full h-full rounded-md flex items-center justify-center text-on-primary bg-blue-400">
+                      <img src="images/psyco-lab-removebg.png" alt="">
+                    </div>
+                  </div>
+                  <!-- <div class="flex flex-col">
+                    <span
+                      class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface font-extrabold leading-tight">
+                      Laboratório<br>de Psicologia
+                    </span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant font-bold">UCAN</span>
+                  </div> -->
+                </div>
+                <!-- Right: Quality Notice & Voluntary Recruitment Details -->
+                <div class="flex flex-col gap-1.5 max-w-[540px] text-left">
+                  <div class="flex items-start gap-2">
+                    <span class="inline-block w-2 h-2 rounded-full bg-primary-container mt-1.5 flex-shrink-0"></span>
+                    <p class="font-body-sm text-body-sm text-on-surface leading-tight">
+                      Para garantir a qualidade dos atendimentos, qualquer irregularidade deve ser reportada através do
+                      número:
+                      <strong class="font-label-lg text-label-lg text-on-surface font-black">923 820 314</strong>.
+                    </p>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="inline-block w-2 h-2 rounded-full bg-primary-container mt-1.5 flex-shrink-0"></span>
+                    <p class="font-body-sm text-body-sm text-on-surface leading-tight">
+                      Para psicólogos voluntários, envie o seu CV, cópia do BI e certificado para:
+                      <strong
+                        class="font-label-md text-label-md text-tertiary font-bold">laboratorio.psicologia@ucan.edu</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Quick Export Settings Panel -->
+          <div class="w-full max-w-[880px] mt-space-xl p-space-lg bg-surface-container-lowest rounded-xl shadow-sm">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-on-surface">Diretrizes de Divulgação Oficial</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">As escalas exportadas possuem carimbo
+                  institucional digital e estão prontas para distribuição comunitária.</p>
+              </div>
+              <div class="flex items-center gap-space-md">
+                <div class="flex flex-col text-right">
+                  <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Mês Vigente</span>
+                  <span class="font-label-lg text-label-lg text-primary font-bold">Abril 2026</span>
+                </div>
+                <div
+                  class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+                  <span class="material-symbols-outlined text-[22px]">verified</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Notification Toast Simulation -->
+      <div
+        class="fixed bottom-6 right-6 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none z-50 bg-inverse-surface text-inverse-on-surface px-space-lg py-space-md rounded-lg shadow-xl flex items-center gap-space-sm"
+        id="toast-export">
+        <span class="material-symbols-outlined text-primary-container text-[24px]">task_alt</span>
+        <div>
+          <p class="font-label-lg text-label-lg" id="toast-title">Ficheiro Gerado!</p>
+          <p class="font-body-sm text-body-sm text-surface-variant" id="toast-desc">O documento foi preparado em alta
+            definição.</p>
+        </div>
+      </div>
+      <script>
+        function showToast(title, message) {
+          const toast = document.getElementById('toast-export');
+          const titleEl = document.getElementById('toast-title');
+          const descEl = document.getElementById('toast-desc');
+
+          titleEl.innerText = title;
+          descEl.innerText = message;
+
+          toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+          setTimeout(() => {
+            toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+          }, 3200);
+        }
+
+        function switchFormat(mode) {
+          const artboard = document.getElementById('exportable-artboard');
+          const hint = document.getElementById('canvas-aspect-hint');
+          const tabSocial = document.getElementById('tab-social');
+          const tabPrint = document.getElementById('tab-print');
+
+          if (mode === 'print') {
+            artboard.classList.remove('max-w-[880px]');
+            artboard.classList.add('max-w-[760px]', 'aspect-[1/1.414]');
+            hint.innerText = 'Formato: Cartaz A4 Proporcional (210 x 297mm) - 300 DPI';
+
+            tabPrint.className = 'px-space-md py-space-xs rounded font-label-md text-label-md transition-all bg-primary-container text-on-primary-container shadow-sm flex items-center gap-space-xs';
+            tabSocial.className = 'px-space-md py-space-xs rounded font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-space-xs';
+            showToast('Formato Cartaz A4 Ativado', 'Layout ajustado para impressão em murais e quadros de aviso.');
+          } else {
+            artboard.classList.remove('max-w-[760px]', 'aspect-[1/1.414]');
+            artboard.classList.add('max-w-[880px]');
+            hint.innerText = 'Formato: 1080 x 1080px (Instagram / Post)';
+
+            tabSocial.className = 'px-space-md py-space-xs rounded font-label-md text-label-md transition-all bg-primary-container text-on-primary-container shadow-sm flex items-center gap-space-xs';
+            tabPrint.className = 'px-space-md py-space-xs rounded font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-space-xs';
+            showToast('Formato Redes Sociais Ativado', 'Pronto para compartilhamento no Instagram, WhatsApp e Facebook.');
+          }
+        }
+
+        function downloadPNG() {
+          showToast('A Descarregar PNG...', 'O ficheiro de imagem de alta definição está pronto.');
+        }
+
+        function downloadPDF() {
+          window.print();
+        }
+      </script>
+    </div>
+  </main>
+  <footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.03)] py-space-xl">
+    <div
+      class="max-w-[1140px] mx-auto px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-lg text-center md:text-left">
+      <div>
+        <p class="font-headline-md text-headline-md text-on-surface">Laboratório de Atendimento Psicológico Online</p>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Universidade Católica • Projeto de Extensão
+          Comunitária Gratuito</p>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-space-xl">
+        <div class="flex items-center gap-space-xs"><span
+            class="material-symbols-outlined text-primary text-[20px]">call</span>
+          <div class="text-left"><span class="block font-label-sm text-label-sm text-on-surface-variant">Canal de
+              Reporte e Dúvidas</span><span class="font-label-lg text-label-lg text-on-surface">923 820 314</span></div>
+        </div>
+        <div class="flex items-center gap-space-xs"><span
+            class="material-symbols-outlined text-primary text-[20px]">schedule</span>
+          <div class="text-left"><span class="block font-label-sm text-label-sm text-on-surface-variant">Plantão
+              Psicológico</span><span class="font-label-lg text-label-lg text-on-surface">Segunda a Sexta-feira</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="max-w-[1140px] mx-auto px-gutter-desktop mt-space-lg pt-space-md flex flex-col sm:flex-row items-center justify-between text-on-surface-variant">
+      <span class="font-body-sm text-body-sm">© 2026 Laboratório de Psicologia - Universidade Católica. Todos os
+        direitos reservados.</span><span class="font-label-sm text-label-sm text-tertiary font-bold">Atendimento
+        Humanizado e Gratuito</span>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary-container": "#fb922a", "surface-container-highest": "#dce2f7", "outline": "#847561", "on-tertiary-fixed": "#2f1500", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#534600", "on-primary-fixed": "#281800", "on-error": "#ffffff", "inverse-primary": "#ffba44", "primary-container": "#e59e0b", "surface-container": "#e9edff", "outline-variant": "#d6c4ad", "on-surface": "#141b2b", "secondary-fixed": "#f9e287", "on-error-container": "#93000a", "surface": "#f9f9ff", "secondary-fixed-dim": "#dcc66e", "on-secondary": "#ffffff", "on-primary-fixed-variant": "#614000", "secondary-container": "#f6df84", "inverse-on-surface": "#edf0ff", "tertiary-fixed-dim": "#ffb77d", "on-tertiary": "#ffffff", "on-secondary-container": "#726212", "primary-fixed": "#ffddaf", "surface-tint": "#805600", "primary": "#805600", "surface-container-low": "#f1f3ff", "surface-bright": "#f9f9ff", "on-surface-variant": "#514534", "error": "#ba1a1a", "surface-container-high": "#e1e8fd", "tertiary": "#904d00", "surface-variant": "#dce2f7", "tertiary-fixed": "#ffdcc3", "on-background": "#141b2b", "on-primary": "#ffffff", "primary-fixed-dim": "#ffba44", "surface-dim": "#d3daef", "on-tertiary-fixed-variant": "#6e3900", "secondary": "#6e5e0d", "inverse-surface": "#293040", "background": "#f9f9ff", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#643300", "on-secondary-fixed": "#221b00", "on-primary-container": "#583a00" }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" }, spacing: { "gutter-desktop": "1.5rem", "space-xl": "2rem", margin: "1rem", "space-sm": "0.5rem", gutter: "1rem", "space-xs": "0.25rem", "space-lg": "1.25rem", "space-md": "0.75rem", "margin-desktop": "2.5rem" }, fontFamily: { "body-sm": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, fontSize: { "body-sm": ["12px", { lineHeight: "18px", fontWeight: "500" }], "headline-xl-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "800" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "500" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-md": ["18px", { lineHeight: "26px", letterSpacing: "0.02em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.03em", fontWeight: "700" }], "headline-xl": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "800" }], "headline-lg": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "800" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "700" }] } } } };</script>
+</head>
+
+<body class="bg-background font-body-md text-body-md text-on-surface">
+  <header
+    class="fixed top-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-16 max-w-[1140px] mx-auto px-gutter-desktop flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-md">
+        <div class="w-14 h-14 rounded flex items-center justify-center"> <img src="images/logo.jpg" alt="">
+        </div>
+        <div class="flex flex-col"><span
+            class="font-headline-md text-headline-md text-on-surface leading-tight">Laboratório de Psicologia</span>
+          <div class="flex items-center gap-space-xs"><span
+              class="font-label-sm text-label-sm text-on-surface-variant">Universidade Católica</span><span
+              class="inline-block w-1.5 h-1.5 rounded-full bg-primary"></span><span
+              class="font-label-sm text-label-sm text-primary uppercase font-bold">Serviço Gratuito</span></div>
+        </div>
+      </div>
+      <nav class="flex items-center gap-space-xs bg-surface-container-low p-space-xs rounded-lg"
+        data-active-classes="bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded px-space-md py-space-xs">
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded transition-colors"
+          data-path="escala-publica" href="index.html">Escala Pública</a><a
+          class="transition-colors bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded px-space-md py-space-xs"
+          data-path="edicao-da-escala" href="#">Edição da Escala (Admin)</a><a
+          class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded transition-colors"
+          data-path="exportar-redes-sociais" href="export.html">Exportar / Redes Sociais</a>
+      </nav>
+      <div class="flex items-center gap-space-md">
+        <div class="hidden md:flex flex-col items-end"><span
+            class="font-label-sm text-label-sm text-on-surface-variant uppercase">Apoio Imediato</span><span
+            class="font-label-md text-label-md text-tertiary">923 820 314</span></div>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="w-full pt-16 bg-background min-h-screen">
+    <div class="flex flex-col w-full">
+      <div class="w-full bg-surface-container-low py-space-md">
+        <div
+          class="max-w-[1140px] mx-auto px-gutter-desktop flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm">
+          <div class="flex items-center gap-space-sm">
+            <span
+              class="inline-flex items-center justify-center w-8 h-8 rounded bg-primary-container text-on-primary-container">
+              <span class="material-symbols-outlined text-[20px]">edit_calendar</span>
+            </span>
+            <div>
+              <h1 class="font-headline-md text-headline-md text-on-surface">Edição da Escala Mensal (Área do
+                Laboratório)</h1>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Selecione os profissionais e horários
+                disponíveis diretamente na grelha.</p>
+            </div>
+          </div>
+          <div class="inline-flex items-center gap-space-xs bg-surface-container-highest px-space-md py-1 rounded">
+            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            <span class="font-label-sm text-label-sm text-on-surface">Modo Administrativo Ativo</span>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-[1140px] w-full mx-auto px-gutter-desktop py-space-lg flex flex-col gap-space-lg">
+        <div
+          class="bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+          <div class="flex flex-wrap items-center gap-space-md">
+            <div class="flex items-center gap-space-xs">
+              <label class="font-label-md text-label-md text-on-surface-variant" for="mes-selector">Mês de
+                Referência:</label>
+              <div class="relative inline-block">
+                <select
+                  class="appearance-none bg-surface-container-low text-on-surface font-headline-sm text-headline-sm pl-space-sm pr-space-xl py-space-xs rounded focus:outline-none focus:bg-surface-container-highest cursor-pointer"
+                  id="mes-selector">
+                  <option selected="" value="abr-2026">Abril de 2026</option>
+                  <option value="mai-2026">Maio de 2026</option>
+                  <option value="jun-2026">Junho de 2026</option>
+                  <option value="jul-2026">Julho de 2026</option>
+                </select>
+                <span
+                  class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[20px]">arrow_drop_down</span>
+              </div>
+            </div>
+            <button
+              class="inline-flex items-center gap-space-xs bg-surface-container px-space-md py-space-xs rounded text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors"
+              id="btn-add-psicologo" type="button">
+              <span class="material-symbols-outlined text-[18px] text-primary">person_add</span>
+              Adicionar Novo Psicólogo
+            </button>
+          </div>
+          <div class="flex items-center gap-space-sm justify-end">
+            <button
+              class="inline-flex items-center gap-space-xs bg-surface-container-low hover:bg-surface-container px-space-lg py-space-xs rounded text-on-surface-variant font-label-md text-label-md transition-colors"
+              id="btn-descartar" type="button">
+              <span class="material-symbols-outlined text-[18px]">undo</span>
+              Descartar
+            </button>
+            <button
+              class="inline-flex items-center gap-space-xs bg-primary-container hover:bg-tertiary-container text-on-primary-container px-space-lg py-space-xs rounded font-label-lg text-label-lg shadow-sm transition-all transform active:scale-95"
+              id="btn-guardar" type="button">
+              <span class="material-symbols-outlined text-[20px]">save</span>
+              Guardar Alterações
+            </button>
+          </div>
+        </div>
+        <div class="w-full bg-surface-container-lowest rounded shadow-sm overflow-hidden">
+          <div class="bg-primary-container text-on-primary-container px-space-lg py-space-md text-center">
+            <span class="font-label-sm text-label-sm tracking-widest uppercase block opacity-90">Laboratório de
+              Psicologia • UCAN</span>
+            <h2 class="font-headline-lg text-headline-lg uppercase tracking-wide" id="table-banner-title">
+              ESCALA REFERENTE AO MÊS DE ABRIL DE 2026
+            </h2>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full min-w-[760px] table-fixed border-collapse">
+              <thead>
+                <tr class="bg-secondary-container text-on-secondary-container">
+                  <th class="w-[16%] py-space-md px-space-sm text-center font-headline-md text-headline-md">Horários
+                  </th>
+                  <th class="w-[16.8%] py-space-md px-space-sm text-center font-headline-md text-headline-md">Segunda
+                  </th>
+                  <th class="w-[16.8%] py-space-md px-space-sm text-center font-headline-md text-headline-md">Terça</th>
+                  <th class="w-[16.8%] py-space-md px-space-sm text-center font-headline-md text-headline-md">Quarta
+                  </th>
+                  <th class="w-[16.8%] py-space-md px-space-sm text-center font-headline-md text-headline-md">Quinta
+                  </th>
+                  <th class="w-[16.8%] py-space-md px-space-sm text-center font-headline-md text-headline-md">Sexta</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y-0" id="schedule-tbody">
+                <tr class="hover:bg-surface-container-low/60 transition-colors">
+                  <td
+                    class="bg-surface-container-lowest py-space-md px-space-sm text-center font-label-lg text-label-lg text-on-surface">
+                    08h às 10h
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div
+                      class="min-h-[72px] flex flex-col items-center justify-center gap-space-xs p-space-xs rounded bg-surface">
+                      <span class="font-headline-md text-headline-md text-on-surface-variant/40">-</span>
+                      <button
+                        class="btn-slot-assign text-primary hover:text-tertiary font-label-sm text-label-sm inline-flex items-center gap-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> Atribuir
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div
+                      class="min-h-[72px] flex flex-col items-center justify-center gap-space-xs p-space-xs rounded bg-surface">
+                      <span class="font-headline-md text-headline-md text-on-surface-variant/40">-</span>
+                      <button
+                        class="btn-slot-assign text-primary hover:text-tertiary font-label-sm text-label-sm inline-flex items-center gap-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> Atribuir
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div
+                      class="min-h-[72px] flex flex-col items-center justify-center gap-space-xs p-space-xs rounded bg-surface">
+                      <span class="font-headline-md text-headline-md text-on-surface-variant/40">-</span>
+                      <button
+                        class="btn-slot-assign text-primary hover:text-tertiary font-label-sm text-label-sm inline-flex items-center gap-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> Atribuir
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div
+                      class="min-h-[72px] flex flex-col items-center justify-center gap-space-xs p-space-xs rounded bg-surface">
+                      <span class="font-headline-md text-headline-md text-on-surface-variant/40">-</span>
+                      <button
+                        class="btn-slot-assign text-primary hover:text-tertiary font-label-sm text-label-sm inline-flex items-center gap-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> Atribuir
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div class="flex flex-col gap-1.5 p-space-xs rounded bg-secondary-fixed/30">
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dra. Sandra Pedro</option>
+                            <option>Dr. João Paulo</option>
+                            <option>Dra. Maria Bento</option>
+                            <option>Dr. Lucas Silva</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" title="Remover profissional"
+                            type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            placeholder="WhatsApp" type="text" value="947 031 237">
+                        </div>
+                      </div>
+                      <button
+                        class="btn-slot-assign text-on-surface-variant hover:text-primary font-label-sm text-label-sm inline-flex items-center justify-center gap-0.5 py-1"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> 1 Turno
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="bg-surface-container-low/20 hover:bg-surface-container-low/60 transition-colors">
+                  <td
+                    class="bg-surface-container-lowest py-space-md px-space-sm text-center font-label-lg text-label-lg text-on-surface">
+                    10h às 12h
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div class="flex flex-col gap-1.5 p-space-xs rounded bg-secondary-fixed/30">
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dr. Carlos Mendes</option>
+                            <option>Dra. Sandra Pedro</option>
+                            <option>Dr. Lucas Silva</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="932 458 408">
+                        </div>
+                      </div>
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dra. Maria Bento</option>
+                            <option>Dr. Carlos Mendes</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="992 453 810">
+                        </div>
+                      </div>
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dr. Wilson Gonga</option>
+                            <option>Dr. Lucas Silva</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="949 014 143">
+                        </div>
+                      </div>
+                      <button
+                        class="btn-slot-assign text-on-surface-variant hover:text-primary font-label-sm text-label-sm inline-flex items-center justify-center gap-0.5 py-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> 1 Turno
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div class="flex flex-col gap-1.5 p-space-xs rounded bg-secondary-fixed/30">
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dr. João Paulo</option>
+                            <option>Dra. Sandra Pedro</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="933 592 553">
+                        </div>
+                      </div>
+                      <button
+                        class="btn-slot-assign text-on-surface-variant hover:text-primary font-label-sm text-label-sm inline-flex items-center justify-center gap-0.5 py-1"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> 1 Turno
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div class="flex flex-col gap-1.5 p-space-xs rounded bg-secondary-fixed/30">
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dra. Teresa Vunge</option>
+                            <option>Dr. Lucas Silva</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="938 355 088">
+                        </div>
+                      </div>
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dra. Maria Bento</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="992 453 810">
+                        </div>
+                      </div>
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dr. Wilson Gonga</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="949 014 143">
+                        </div>
+                      </div>
+                      <button
+                        class="btn-slot-assign text-on-surface-variant hover:text-primary font-label-sm text-label-sm inline-flex items-center justify-center gap-0.5 py-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> 1 Turno
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div class="flex flex-col gap-1.5 p-space-xs rounded bg-secondary-fixed/30">
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dr. Abel Neves</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="926 215 874">
+                        </div>
+                      </div>
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dr. João Paulo</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="933 592 553">
+                        </div>
+                      </div>
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dra. Inês Kalufe</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="974 537 974">
+                        </div>
+                      </div>
+                      <button
+                        class="btn-slot-assign text-on-surface-variant hover:text-primary font-label-sm text-label-sm inline-flex items-center justify-center gap-0.5 py-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> 1 Turno
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div class="flex flex-col gap-1.5 p-space-xs rounded bg-secondary-fixed/30">
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dra. Sandra Pedro</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="947 031 237">
+                        </div>
+                      </div>
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dr. Wilson Gonga</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="949 014 143">
+                        </div>
+                      </div>
+                      <button
+                        class="btn-slot-assign text-on-surface-variant hover:text-primary font-label-sm text-label-sm inline-flex items-center justify-center gap-0.5 py-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> 1 Turno
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="hover:bg-surface-container-low/60 transition-colors">
+                  <td
+                    class="bg-surface-container-lowest py-space-md px-space-sm text-center font-label-lg text-label-lg text-on-surface">
+                    12h às 14h
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div
+                      class="min-h-[72px] flex flex-col items-center justify-center gap-space-xs p-space-xs rounded bg-surface">
+                      <span class="font-headline-md text-headline-md text-on-surface-variant/40">-</span>
+                      <button
+                        class="btn-slot-assign text-primary hover:text-tertiary font-label-sm text-label-sm inline-flex items-center gap-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> Atribuir
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div
+                      class="min-h-[72px] flex flex-col items-center justify-center gap-space-xs p-space-xs rounded bg-surface">
+                      <span class="font-headline-md text-headline-md text-on-surface-variant/40">-</span>
+                      <button
+                        class="btn-slot-assign text-primary hover:text-tertiary font-label-sm text-label-sm inline-flex items-center gap-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> Atribuir
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div
+                      class="min-h-[72px] flex flex-col items-center justify-center gap-space-xs p-space-xs rounded bg-surface">
+                      <span class="font-headline-md text-headline-md text-on-surface-variant/40">-</span>
+                      <button
+                        class="btn-slot-assign text-primary hover:text-tertiary font-label-sm text-label-sm inline-flex items-center gap-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> Atribuir
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div
+                      class="min-h-[72px] flex flex-col items-center justify-center gap-space-xs p-space-xs rounded bg-surface">
+                      <span class="font-headline-md text-headline-md text-on-surface-variant/40">-</span>
+                      <button
+                        class="btn-slot-assign text-primary hover:text-tertiary font-label-sm text-label-sm inline-flex items-center gap-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> Atribuir
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div
+                      class="min-h-[72px] flex flex-col items-center justify-center gap-space-xs p-space-xs rounded bg-surface">
+                      <span class="font-headline-md text-headline-md text-on-surface-variant/40">-</span>
+                      <button
+                        class="btn-slot-assign text-primary hover:text-tertiary font-label-sm text-label-sm inline-flex items-center gap-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> Atribuir
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="bg-surface-container-low/20 hover:bg-surface-container-low/60 transition-colors">
+                  <td
+                    class="bg-surface-container-lowest py-space-md px-space-sm text-center font-label-lg text-label-lg text-on-surface">
+                    14h às 16h
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div
+                      class="min-h-[72px] flex flex-col items-center justify-center gap-space-xs p-space-xs rounded bg-surface">
+                      <span class="font-headline-md text-headline-md text-on-surface-variant/40">-</span>
+                      <button
+                        class="btn-slot-assign text-primary hover:text-tertiary font-label-sm text-label-sm inline-flex items-center gap-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> Atribuir
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div
+                      class="min-h-[72px] flex flex-col items-center justify-center gap-space-xs p-space-xs rounded bg-surface">
+                      <span class="font-headline-md text-headline-md text-on-surface-variant/40">-</span>
+                      <button
+                        class="btn-slot-assign text-primary hover:text-tertiary font-label-sm text-label-sm inline-flex items-center gap-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> Atribuir
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div
+                      class="min-h-[72px] flex flex-col items-center justify-center gap-space-xs p-space-xs rounded bg-surface">
+                      <span class="font-headline-md text-headline-md text-on-surface-variant/40">-</span>
+                      <button
+                        class="btn-slot-assign text-primary hover:text-tertiary font-label-sm text-label-sm inline-flex items-center gap-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> Atribuir
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div
+                      class="min-h-[72px] flex flex-col items-center justify-center gap-space-xs p-space-xs rounded bg-surface">
+                      <span class="font-headline-md text-headline-md text-on-surface-variant/40">-</span>
+                      <button
+                        class="btn-slot-assign text-primary hover:text-tertiary font-label-sm text-label-sm inline-flex items-center gap-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> Atribuir
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div class="flex flex-col gap-1.5 p-space-xs rounded bg-secondary-fixed/30">
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dra. Teresa Vunge</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="938 355 088">
+                        </div>
+                      </div>
+                      <button
+                        class="btn-slot-assign text-on-surface-variant hover:text-primary font-label-sm text-label-sm inline-flex items-center justify-center gap-0.5 py-1"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> 1 Turno
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="hover:bg-surface-container-low/60 transition-colors">
+                  <td
+                    class="bg-surface-container-lowest py-space-md px-space-sm text-center font-label-lg text-label-lg text-on-surface">
+                    16h às 18h
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div
+                      class="min-h-[72px] flex flex-col items-center justify-center gap-space-xs p-space-xs rounded bg-surface">
+                      <span class="font-headline-md text-headline-md text-on-surface-variant/40">-</span>
+                      <button
+                        class="btn-slot-assign text-primary hover:text-tertiary font-label-sm text-label-sm inline-flex items-center gap-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> Atribuir
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div
+                      class="min-h-[72px] flex flex-col items-center justify-center gap-space-xs p-space-xs rounded bg-surface">
+                      <span class="font-headline-md text-headline-md text-on-surface-variant/40">-</span>
+                      <button
+                        class="btn-slot-assign text-primary hover:text-tertiary font-label-sm text-label-sm inline-flex items-center gap-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> Atribuir
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div
+                      class="min-h-[72px] flex flex-col items-center justify-center gap-space-xs p-space-xs rounded bg-surface">
+                      <span class="font-headline-md text-headline-md text-on-surface-variant/40">-</span>
+                      <button
+                        class="btn-slot-assign text-primary hover:text-tertiary font-label-sm text-label-sm inline-flex items-center gap-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> Atribuir
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div
+                      class="min-h-[72px] flex flex-col items-center justify-center gap-space-xs p-space-xs rounded bg-surface">
+                      <span class="font-headline-md text-headline-md text-on-surface-variant/40">-</span>
+                      <button
+                        class="btn-slot-assign text-primary hover:text-tertiary font-label-sm text-label-sm inline-flex items-center gap-0.5"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> Atribuir
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div class="flex flex-col gap-1.5 p-space-xs rounded bg-secondary-fixed/30">
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dr. Abel Neves</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="926 215 874">
+                        </div>
+                      </div>
+                      <button
+                        class="btn-slot-assign text-on-surface-variant hover:text-primary font-label-sm text-label-sm inline-flex items-center justify-center gap-0.5 py-1"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> 1 Turno
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="bg-surface-container-low/20 hover:bg-surface-container-low/60 transition-colors">
+                  <td
+                    class="bg-surface-container-lowest py-space-md px-space-sm text-center font-label-lg text-label-lg text-on-surface">
+                    18h às 20h
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div class="flex flex-col gap-1.5 p-space-xs rounded bg-secondary-fixed/30">
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dra. Laura Fortes</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="936 787 231">
+                        </div>
+                      </div>
+                      <button
+                        class="btn-slot-assign text-on-surface-variant hover:text-primary font-label-sm text-label-sm inline-flex items-center justify-center gap-0.5 py-1"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> 1 Turno
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div class="flex flex-col gap-1.5 p-space-xs rounded bg-secondary-fixed/30">
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dra. Laura Fortes</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="936 787 231">
+                        </div>
+                      </div>
+                      <button
+                        class="btn-slot-assign text-on-surface-variant hover:text-primary font-label-sm text-label-sm inline-flex items-center justify-center gap-0.5 py-1"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> 1 Turno
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div class="flex flex-col gap-1.5 p-space-xs rounded bg-secondary-fixed/30">
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dra. Laura Fortes</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="936 787 231">
+                        </div>
+                      </div>
+                      <button
+                        class="btn-slot-assign text-on-surface-variant hover:text-primary font-label-sm text-label-sm inline-flex items-center justify-center gap-0.5 py-1"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> 1 Turno
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div class="flex flex-col gap-1.5 p-space-xs rounded bg-secondary-fixed/30">
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dra. Laura Fortes</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="936 787 231">
+                        </div>
+                      </div>
+                      <button
+                        class="btn-slot-assign text-on-surface-variant hover:text-primary font-label-sm text-label-sm inline-flex items-center justify-center gap-0.5 py-1"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> 1 Turno
+                      </button>
+                    </div>
+                  </td>
+                  <td
+                    class="p-space-xs align-top bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                    <div class="flex flex-col gap-1.5 p-space-xs rounded bg-secondary-fixed/30">
+                      <div
+                        class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                        <div class="flex items-center justify-between gap-1">
+                          <select
+                            class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                            <option selected="">Dra. Laura Fortes</option>
+                          </select>
+                          <button class="btn-slot-delete text-error hover:opacity-80 p-0.5" type="button">
+                            <span class="material-symbols-outlined text-[16px]">close</span>
+                          </button>
+                        </div>
+                        <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                          <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                          <input
+                            class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none"
+                            type="text" value="936 787 231">
+                        </div>
+                      </div>
+                      <button
+                        class="btn-slot-assign text-on-surface-variant hover:text-primary font-label-sm text-label-sm inline-flex items-center justify-center gap-0.5 py-1"
+                        type="button">
+                        <span class="material-symbols-outlined text-[14px]">add</span> 1 Turno
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            class="bg-surface-container-low px-space-lg py-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+            <span class="font-label-sm text-label-sm text-on-surface-variant">
+              Total de turnos preenchidos: <strong class="text-on-surface">14 atribuições ativas</strong>
+            </span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant">
+              Última modificação salva: <span class="font-semibold text-on-surface" id="last-saved-time">Hoje às
+                11:42</span>
+            </span>
+          </div>
+        </div>
+        <div
+          class="bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-wrap items-center justify-between gap-space-md">
+          <div class="flex items-center gap-space-xs text-on-surface-variant">
+            <span class="material-symbols-outlined text-[20px] text-primary">flash_on</span>
+            <span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Ações Rápidas de
+              Publicação</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-space-sm">
+            <button
+              class="inline-flex items-center gap-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface px-space-md py-space-xs rounded font-label-md text-label-md transition-colors"
+              id="btn-preview" type="button">
+              <span class="material-symbols-outlined text-[18px]">visibility</span>
+              Ver Pré-visualização da Escala
+            </button>
+            <button
+              class="inline-flex items-center gap-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface px-space-md py-space-xs rounded font-label-md text-label-md transition-colors"
+              id="btn-export-png" type="button">
+              <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+              Exportar como Imagem (PNG)
+            </button>
+            <button
+              class="inline-flex items-center gap-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface px-space-md py-space-xs rounded font-label-md text-label-md transition-colors"
+              id="btn-export-pdf" type="button">
+              <span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+              Exportar PDF para Mural
+            </button>
+          </div>
+        </div>
+        <!-- <div
+          class="bg-secondary-container/40 rounded p-space-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+          <div class="flex items-center gap-space-md">
+            <div
+              class="w-12 h-12 rounded bg-surface-container-lowest flex items-center justify-center shadow-sm shrink-0">
+              <span class="material-symbols-outlined text-primary text-[28px]">support_agent</span>
+            </div>
+            <div>
+              <h3 class="font-headline-md text-headline-md text-on-surface">Canal de Suporte e Auditoria da Escala</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Para cancelamentos pontuais ou trocas de
+                urgência de voluntários, atualize a escala e avise a coordenação.</p>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-md">
+            <div class="text-left md:text-right">
+              <span class="font-label-sm text-label-sm text-on-surface-variant uppercase block">Linha de
+                Coordenação</span>
+              <span class="font-headline-md text-headline-md text-on-surface">923 820 314</span>
+            </div>
+            <div class="text-left md:text-right">
+              <span class="font-label-sm text-label-sm text-on-surface-variant uppercase block">Email
+                Institucional</span>
+              <span class="font-label-md text-label-md text-on-surface">laboratorio.psicologia@ucan.edu</span>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div
+        class="fixed bottom-6 right-6 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none z-50 bg-inverse-surface text-inverse-on-surface px-space-lg py-space-md rounded shadow-xl flex items-center gap-space-sm"
+        id="status-toast">
+        <span class="material-symbols-outlined text-primary-container text-[20px]">check_circle</span>
+        <span class="font-label-md text-label-md" id="toast-message">Alterações guardadas com sucesso!</span>
+      </div>
+      <script>
+        (function () {
+          const toast = document.getElementById('status-toast');
+          const toastMsg = document.getElementById('toast-message');
+
+          function showToast(msg) {
+            if (!toast) return;
+            toastMsg.textContent = msg;
+            toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+              toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+            }, 3000);
+          }
+
+          const mesSelector = document.getElementById('mes-selector');
+          const tableTitle = document.getElementById('table-banner-title');
+          if (mesSelector && tableTitle) {
+            mesSelector.addEventListener('change', (e) => {
+              const selectedText = e.target.options[e.target.selectedIndex].text;
+              tableTitle.textContent = 'ESCALA REFERENTE AO MÊS DE ' + selectedText.toUpperCase();
+              showToast('Escala de ' + selectedText + ' carregada para edição.');
+            });
+          }
+
+          const btnGuardar = document.getElementById('btn-guardar');
+          if (btnGuardar) {
+            btnGuardar.addEventListener('click', () => {
+              const now = new Date();
+              const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+              const timeElem = document.getElementById('last-saved-time');
+              if (timeElem) timeElem.textContent = 'Hoje às ' + timeStr;
+              showToast('Escala publicada com sucesso no portal público!');
+            });
+          }
+
+          const btnDescartar = document.getElementById('btn-descartar');
+          if (btnDescartar) {
+            btnDescartar.addEventListener('click', () => {
+              if (confirm('Tem a certeza de que deseja descartar as alterações não salvas?')) {
+                window.location.reload();
+              }
+            });
+          }
+
+          const btnAddPsicologo = document.getElementById('btn-add-psicologo');
+          if (btnAddPsicologo) {
+            btnAddPsicologo.addEventListener('click', () => {
+              const nome = prompt('Nome do novo psicólogo voluntário:');
+              if (nome && nome.trim() !== '') {
+                const selects = document.querySelectorAll('select:not(#mes-selector)');
+                selects.forEach(sel => {
+                  const opt = document.createElement('option');
+                  opt.value = nome.trim();
+                  opt.textContent = nome.trim();
+                  sel.appendChild(opt);
+                });
+                showToast('Profissional ' + nome.trim() + ' adicionado à lista.');
+              }
+            });
+          }
+
+          document.addEventListener('click', (e) => {
+            const delBtn = e.target.closest('.btn-slot-delete');
+            if (delBtn) {
+              const slotItem = delBtn.closest('.slot-item');
+              const parentContainer = slotItem.parentElement;
+              slotItem.remove();
+
+              const remainingItems = parentContainer.querySelectorAll('.slot-item');
+              if (remainingItems.length === 0) {
+                parentContainer.outerHTML = `
+              <div class="min-h-[72px] flex flex-col items-center justify-center gap-space-xs p-space-xs rounded bg-surface">
+                <span class="font-headline-md text-headline-md text-on-surface-variant/40">-</span>
+                <button type="button" class="btn-slot-assign text-primary hover:text-tertiary font-label-sm text-label-sm inline-flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-[14px]">add</span> Atribuir
+                </button>
+              </div>
+            `;
+              }
+              showToast('Turno removido.');
+              return;
+            }
+
+            const assignBtn = e.target.closest('.btn-slot-assign');
+            if (assignBtn) {
+              const cell = assignBtn.closest('td');
+              if (!cell) return;
+
+              let container = cell.querySelector('.slot-item')?.parentElement;
+              if (!container) {
+                cell.innerHTML = `
+              <div class="flex flex-col gap-1.5 p-space-xs rounded bg-secondary-fixed/30">
+                <div class="slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1">
+                  <div class="flex items-center justify-between gap-1">
+                    <select class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                      <option selected>Dra. Sandra Pedro</option>
+                      <option>Dr. João Paulo</option>
+                      <option>Dra. Maria Bento</option>
+                      <option>Dr. Carlos Mendes</option>
+                      <option>Dra. Laura Fortes</option>
+                    </select>
+                    <button type="button" class="btn-slot-delete text-error hover:opacity-80 p-0.5">
+                      <span class="material-symbols-outlined text-[16px]">close</span>
+                    </button>
+                  </div>
+                  <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                    <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                    <input type="text" value="923 820 314" class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none">
+                  </div>
+                </div>
+                <button type="button" class="btn-slot-assign text-on-surface-variant hover:text-primary font-label-sm text-label-sm inline-flex items-center justify-center gap-0.5 py-1">
+                  <span class="material-symbols-outlined text-[14px]">add</span> 1 Turno
+                </button>
+              </div>
+            `;
+              } else {
+                const newItem = document.createElement('div');
+                newItem.className = 'slot-item bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col gap-1';
+                newItem.innerHTML = `
+              <div class="flex items-center justify-between gap-1">
+                <select class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none w-full truncate">
+                  <option selected>Dr. João Paulo</option>
+                  <option>Dra. Sandra Pedro</option>
+                  <option>Dra. Maria Bento</option>
+                  <option>Dr. Carlos Mendes</option>
+                </select>
+                <button type="button" class="btn-slot-delete text-error hover:opacity-80 p-0.5">
+                  <span class="material-symbols-outlined text-[16px]">close</span>
+                </button>
+              </div>
+              <div class="flex items-center gap-1 bg-surface-container-low px-1.5 py-0.5 rounded">
+                <span class="material-symbols-outlined text-[13px] text-primary">call</span>
+                <input type="text" value="933 592 553" class="w-full bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none">
+              </div>
+            `;
+                container.insertBefore(newItem, assignBtn);
+              }
+              showToast('Turno adicionado.');
+            }
+          });
+
+          const btnPreview = document.getElementById('btn-preview');
+          if (btnPreview) {
+            btnPreview.addEventListener('click', () => {
+              showToast('A abrir pré-visualização da escala para o público...');
+            });
+          }
+
+          const btnExportPng = document.getElementById('btn-export-png');
+          if (btnExportPng) {
+            btnExportPng.addEventListener('click', () => {
+              showToast('A preparar imagem de alta resolução (PNG)...');
+            });
+          }
+
+          const btnExportPdf = document.getElementById('btn-export-pdf');
+          if (btnExportPdf) {
+            btnExportPdf.addEventListener('click', () => {
+              showToast('A gerar PDF para impressão institucional...');
+            });
+          }
+        })();
+      </script>
+    </div>
+  </main>
+  <footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.03)] py-space-xl">
+    <div
+      class="max-w-[1140px] mx-auto px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-lg text-center md:text-left">
+      <div>
+        <p class="font-headline-md text-headline-md text-on-surface">Laboratório de Atendimento Psicológico Online</p>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Universidade Católica • Projeto de Extensão
+          Comunitária Gratuito</p>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-space-xl">
+        <div class="flex items-center gap-space-xs"><span
+            class="material-symbols-outlined text-primary text-[20px]">call</span>
+          <div class="text-left"><span class="block font-label-sm text-label-sm text-on-surface-variant">Canal de
+              Reporte e Dúvidas</span><span class="font-label-lg text-label-lg text-on-surface">923 820 314</span></div>
+        </div>
+        <div class="flex items-center gap-space-xs"><span
+            class="material-symbols-outlined text-primary text-[20px]">schedule</span>
+          <div class="text-left"><span class="block font-label-sm text-label-sm text-on-surface-variant">Plantão
+              Psicológico</span><span class="font-label-lg text-label-lg text-on-surface">Segunda a Sexta-feira</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="max-w-[1140px] mx-auto px-gutter-desktop mt-space-lg pt-space-md flex flex-col sm:flex-row items-center justify-between text-on-surface-variant">
+      <span class="font-body-sm text-body-sm">© 2026 Laboratório de Psicologia - Universidade Católica. Todos os
+        direitos reservados.</span><span class="font-label-sm text-label-sm text-tertiary font-bold">Atendimento
+        Humanizado e Gratuito</span>
+    </div>
+  </footer>
+</body>
+
+</html>
