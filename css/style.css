@@ -22,3 +22,13 @@
   ::-webkit-scrollbar {
     display: none;
   }
+
+  nav a.active {
+    color: #e59e0b;
+
+    &:hover {
+      color: #e59e0b;
+    }
+
+    /* @apply transition-colors bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded px-space-md py-space-xs */
+  }

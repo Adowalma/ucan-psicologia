@@ -6,6 +6,16 @@ const routes = {
   export: "pages/export.html",
 };
 
+function setActiveMenu(page) {
+  document.querySelectorAll("nav a").forEach((link) => {
+    link.classList.remove("active");
+
+    if (link.getAttribute("href") === `#${page}`) {
+      link.classList.add("active");
+    }
+  });
+}
+
 async function loadPage() {
   let page = window.location.hash.substring(1);
 
@@ -39,6 +49,8 @@ async function loadPage() {
     const html = await response.text();
 
     app.innerHTML = html;
+
+    setActiveMenu(page);
   } catch (error) {
     console.error(error);
 
