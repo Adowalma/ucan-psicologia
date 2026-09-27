@@ -6,15 +6,10 @@
     </div>
     <div class="pointer-events-none absolute bottom-0 left-0 w-64 h-64 opacity-20"
       style="background-image: radial-gradient(#e59e0b 2px, transparent 2px); background-size: 14px 14px;"></div>
-    <div class="max-w-[1140px] mx-auto relative z-10">
+    <div class="max-w-[1140px] mx-auto relative z-10 mt-8">
       <!-- 1. Cabeçalho Centralizado Institucional -->
       <div class="text-center max-w-3xl mx-auto mb-space-xl">
-        <div
-          class="inline-flex items-center gap-space-xs px-space-md py-1 bg-surface-container-high rounded-full mb-space-sm">
-          <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
-          <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Serviço
-            de Extensão Universitária UCAN</span>
-        </div>
+
         <h1
           class="font-headline-xl text-headline-xl text-on-surface uppercase tracking-tight font-extrabold mb-space-md leading-tight">
           Atendimento Psicológico Gratuito Online
@@ -447,60 +442,3 @@
     </div>
   </div>
 </div>
-<script>
-  function openPsychologistModal(name, time, phone, spec) {
-    const modal = document.getElementById('psychologist-modal');
-    const card = document.getElementById('modal-card');
-
-    document.getElementById('modal-name').textContent = name;
-    document.getElementById('modal-time').textContent = time;
-    document.getElementById('modal-spec').textContent = spec || 'Atendimento Psicológico Geral';
-
-    const cleanPhone = phone.replace(/[^0-9]/g, '');
-    const fullIntlPhone = '244' + cleanPhone;
-
-    const whatsappLink = document.getElementById('modal-whatsapp-link');
-    whatsappLink.href = 'https://wa.me/' + fullIntlPhone + '?text=' + encodeURIComponent('Olá, estou a contactar a partir da escala do Laboratório de Psicologia da UCAN.');
-    document.getElementById('modal-whatsapp-label').textContent = 'Contactar pelo WhatsApp (+244 ' + phone + ')';
-
-    modal.classList.remove('opacity-0', 'pointer-events-none');
-    modal.classList.add('opacity-100');
-    card.classList.remove('scale-95');
-    card.classList.add('scale-100');
-  }
-
-  function closePsychologistModal() {
-    const modal = document.getElementById('psychologist-modal');
-    const card = document.getElementById('modal-card');
-
-    modal.classList.add('opacity-0', 'pointer-events-none');
-    modal.classList.remove('opacity-100');
-    card.classList.remove('scale-100');
-    card.classList.add('scale-95');
-  }
-
-  // Fechar ao clicar fora do cartão
-  document.getElementById('psychologist-modal').addEventListener('click', function (e) {
-    if (e.target === this) {
-      closePsychologistModal();
-    }
-  });
-
-  // Alternador didático de meses
-  const months = ['Março de 2026', 'Abril de 2026', 'Maio de 2026'];
-  let currentMonthIndex = 1;
-
-  document.getElementById('btn-prev-month').addEventListener('click', function () {
-    if (currentMonthIndex > 0) {
-      currentMonthIndex--;
-      document.getElementById('current-month-label').textContent = 'Escala referente ao mês de ' + months[currentMonthIndex];
-    }
-  });
-
-  document.getElementById('btn-next-month').addEventListener('click', function () {
-    if (currentMonthIndex < months.length - 1) {
-      currentMonthIndex++;
-      document.getElementById('current-month-label').textContent = 'Escala referente ao mês de ' + months[currentMonthIndex];
-    }
-  });
-</script>
