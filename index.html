@@ -4,13 +4,16 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
   <link rel="icon" href="images/psyco-lab.png">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
+
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
@@ -20,71 +23,298 @@
 </head>
 
 <body class="bg-background font-body-md text-body-md text-on-surface">
-  <header class="fixed top-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md  shadow-xs">
-    <div class="h-16 max-w-[1140px] mx-auto px-gutter-desktop flex items-center justify-between gap-space-md">
-      <div class="flex items-center gap-space-md">
-        <div class="w-14 h-14 rounded flex items-center justify-center"> <img src="images/logo.jpg" alt="">
-        </div>
-        <div class="flex flex-col"><span
-            class="font-headline-md text-headline-md text-on-surface leading-tight">Laboratório de Psicologia</span>
-          <div class="flex items-center gap-space-xs"><span
-              class="font-label-sm text-label-sm text-on-surface-variant">Universidade Católica</span>
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-xs">
+    <div class="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-gutter-desktop">
+
+      <!-- Barra principal -->
+      <div class="h-16 flex items-center justify-between gap-3">
+
+        <!-- Logo + nome -->
+        <a href="#home" class="flex items-center gap-2 sm:gap-space-md min-w-0">
+          <div
+            class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded flex items-center justify-center flex-shrink-0 overflow-hidden">
+            <img src="images/logo.jpg" alt="Laboratório de Psicologia" class="w-full h-full object-contain">
           </div>
+
+          <div class="flex flex-col min-w-0">
+            <span
+              class="font-headline-md text-headline-md text-on-surface leading-tight truncate max-w-[190px] sm:max-w-none">
+              Laboratório de Psicologia
+            </span>
+
+            <span class="font-label-sm text-label-sm text-on-surface-variant truncate">
+              Universidade Católica
+            </span>
+          </div>
+        </a>
+
+
+        <!-- Navegação desktop -->
+        <nav class="hidden lg:flex items-center gap-space-xs p-space-xs rounded-lg">
+          <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded transition-colors"
+            data-path="escala-publica" href="#home">
+            Escala Pública
+          </a>
+
+          <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded transition-colors"
+            data-path="edicao-da-escala" href="#admin">
+            Edição da Escala (Admin)
+          </a>
+
+          <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded transition-colors"
+            data-path="exportar-redes-sociais" href="#export">
+            Exportar
+          </a>
+        </nav>
+
+
+        <!-- Área direita desktop -->
+        <div class="flex items-center gap-2 sm:gap-space-md">
+
+          <div class="hidden md:flex flex-col items-end">
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">
+              Apoio Imediato
+            </span>
+
+            <span class="font-label-md text-label-md text-tertiary">
+              923 820 314
+            </span>
+          </div>
+
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-on-primary text-[18px]">
+              person
+            </span>
+          </div>
+
+          <!-- Botão menu mobile -->
+          <button id="mobile-menu-button" type="button"
+            class="lg:hidden w-10 h-10 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors"
+            aria-label="Abrir menu" aria-expanded="false">
+            <span class="material-symbols-outlined">
+              menu
+            </span>
+          </button>
+
         </div>
+
       </div>
-      <nav class="flex items-center gap-space-xs p-space-xs rounded-lg"
-        data-active-classes="bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded px-space-md py-space-xs">
-        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded transition-colors"
-          data-path="escala-publica" href="#home">Escala Pública</a>
-        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded transition-colors"
-          data-path="edicao-da-escala" href="#admin">Edição da Escala (Admin)</a>
-        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded transition-colors"
-          data-path="exportar-redes-sociais" href="#export">Exportar</a>
-      </nav>
-      <div class="flex items-center gap-space-md">
-        <div class="hidden md:flex flex-col items-end"><span
-            class="font-label-sm text-label-sm text-on-surface-variant uppercase">Apoio Imediato</span><span
-            class="font-label-md text-label-md text-tertiary">923 820 314</span></div>
-        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
-            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+
+
+      <!-- =================================================
+           MENU MOBILE
+      ================================================== -->
+
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-outline-variant/20 py-3">
+
+        <nav class="flex flex-col gap-1">
+
+          <a href="#home" data-path="escala-publica"
+            class="px-4 py-3 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors">
+            <span class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px]">
+                calendar_month
+              </span>
+              Escala Pública
+            </span>
+          </a>
+
+          <a href="#admin" data-path="edicao-da-escala"
+            class="px-4 py-3 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors">
+            <span class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px]">
+                edit_calendar
+              </span>
+              Edição da Escala
+            </span>
+          </a>
+
+          <a href="#export" data-path="exportar-redes-sociais"
+            class="px-4 py-3 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors">
+            <span class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px]">
+                download
+              </span>
+              Exportar
+            </span>
+          </a>
+
+        </nav>
+
+
+        <!-- Apoio no mobile -->
+        <div class="mt-3 pt-3 border-t border-outline-variant/20 px-4">
+          <span class="block font-label-sm text-label-sm text-on-surface-variant uppercase">
+            Apoio Imediato
+          </span>
+
+          <a href="tel:923820314" class="font-label-md text-label-md text-tertiary">
+            923 820 314
+          </a>
+        </div>
+
       </div>
+
     </div>
   </header>
 
+
+  <!-- =====================================================
+       CONTEÚDO
+  ====================================================== -->
+
   <main class="w-full pt-16 bg-background min-h-screen export" id="app">
-    <!-- ####### Content expected to appear here ###### -->
+    <!-- Conteúdo carregado pelo router -->
   </main>
 
 
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
   <footer class="w-full bg-surface-container-lowest shadow-xs py-space-xl">
+
     <div
-      class="max-w-[1140px] mx-auto px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-lg text-center md:text-left">
-      <div>
-        <p class="font-headline-md text-headline-md text-on-surface">Laboratório de Atendimento Psicológico Online</p>
-        <p class="font-body-sm text-body-sm text-on-surface-variant">Universidade Católica</p>
+      class="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+
+      <!-- Identidade -->
+      <div class="max-w-md">
+        <p class="font-headline-md text-headline-md text-on-surface">
+          Laboratório de Atendimento Psicológico Online
+        </p>
+
+        <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Universidade Católica
+        </p>
       </div>
-      <div class="flex flex-wrap items-center justify-center gap-space-xl">
-        <div class="flex items-top gap-space-sm"><span
-            class="material-symbols-outlined text-primary text-[20px]">call</span>
-          <div class="text-left"><span class="block font-label-sm text-label-sm text-on-surface-variant">Canal de
-              Reporte e Dúvidas</span><span class="font-label-lg text-label-lg text-on-surface">923 820 314</span></div>
-        </div>
-        <div class="flex items-top gap-space-sm"><span
-            class="material-symbols-outlined text-primary text-[20px]">schedule</span>
-          <div class="text-left"><span class="block font-label-sm text-label-sm text-on-surface-variant">Plantão
-              Psicológico</span><span class="font-label-lg text-label-lg text-on-surface">Segunda a Sexta-feira</span>
+
+
+      <!-- Informações -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 w-full md:w-auto">
+
+        <div class="flex items-start gap-3 text-left">
+          <span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0">
+            call
+          </span>
+
+          <div>
+            <span class="block font-label-sm text-label-sm text-on-surface-variant">
+              Canal de Reporte e Dúvidas
+            </span>
+
+            <a href="tel:923820314" class="font-label-lg text-label-lg text-on-surface">
+              923 820 314
+            </a>
           </div>
         </div>
+
+
+        <div class="flex items-start gap-3 text-left">
+          <span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0">
+            schedule
+          </span>
+
+          <div>
+            <span class="block font-label-sm text-label-sm text-on-surface-variant">
+              Plantão Psicológico
+            </span>
+
+            <span class="font-label-lg text-label-lg text-on-surface">
+              Segunda a Sexta-feira
+            </span>
+          </div>
+        </div>
+
       </div>
+
     </div>
+
+
+    <!-- Copyright -->
     <div
-      class="max-w-[1140px] mx-auto px-gutter-desktop mt-space-lg pt-space-md flex flex-col sm:flex-row items-center justify-between text-on-surface-variant">
-      <span class="font-body-sm text-body-sm">© 2026 Laboratório de Psicologia - Universidade Católica. Todos os
-        direitos reservados.</span><span class="font-label-sm text-label-sm text-tertiary font-bold">Atendimento
-        Humanizado e Gratuito</span>
+      class="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-gutter-desktop mt-8 pt-4 border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-on-surface-variant">
+
+      <span class="font-body-sm text-body-sm">
+        © 2026 Laboratório de Psicologia - Universidade Católica.
+        Todos os direitos reservados.
+      </span>
+
+      <span class="font-label-sm text-label-sm text-tertiary font-bold">
+        Atendimento Humanizado e Gratuito
+      </span>
+
     </div>
+
   </footer>
+
+
+  <!-- =====================================================
+       MENU MOBILE JS
+  ====================================================== -->
+
+  <script>
+    const mobileMenuButton =
+      document.getElementById("mobile-menu-button");
+
+    const mobileMenu =
+      document.getElementById("mobile-menu");
+
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener("click", () => {
+        const isOpen =
+          !mobileMenu.classList.contains("hidden");
+
+        mobileMenu.classList.toggle("hidden");
+
+        mobileMenuButton.setAttribute(
+          "aria-expanded",
+          String(!isOpen)
+        );
+
+        const icon =
+          mobileMenuButton.querySelector(
+            ".material-symbols-outlined"
+          );
+
+        if (icon) {
+          icon.textContent = isOpen
+            ? "menu"
+            : "close";
+        }
+      });
+
+
+      // Fechar menu depois de navegar
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+
+          mobileMenuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          const icon =
+            mobileMenuButton.querySelector(
+              ".material-symbols-outlined"
+            );
+
+          if (icon) {
+            icon.textContent = "menu";
+          }
+        });
+      });
+    }
+  </script>
+
+
   <script src="js/route.js"></script>
+
 </body>
 
 </html>
