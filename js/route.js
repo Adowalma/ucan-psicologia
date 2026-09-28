@@ -3,17 +3,17 @@ const app = document.getElementById("app");
 const routes = {
   home: {
     html: "pages/home.html",
-    module: "/js/home.js",
+    module: "./home.js",
   },
 
   admin: {
     html: "pages/admin.html",
-    module: "/js/admin.js",
+    module: "./admin.js",
   },
 
   export: {
     html: "pages/export.html",
-    module: "/js/export.js",
+    module: "./export.js",
   },
 };
 
