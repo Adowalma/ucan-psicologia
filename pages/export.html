@@ -38,7 +38,7 @@
           <span>Descarregar PDF A4</span>
         </button>
         <a class="px-space-md py-space-sm rounded bg-surface-container-low hover:bg-secondary-container text-on-surface font-label-md text-label-md transition-all flex items-center gap-space-xs"
-          href="https://api.whatsapp.com/send?text=Atendimento%20Psicol%C3%B3gico%20Gratuito%20Online%20-%20Universidade%20Cat%C3%B3lica%20de%20Angola.%20Consulte%20a%20escala%20actualizada%20de%20Abril."
+          href="https://api.whatsapp.com/send?text=Atendimento%20Psicol%C3%B3gico%20Gratuito%20Online%20-%20Universidade%20Cat%C3%B3lica%20de%20Angola.%20Consulte%20a%20escala%20actualizada%20de%20Setembro."
           target="_blank">
           <span class="material-symbols-outlined text-primary text-[20px]">share</span>
           <span>Partilhar no WhatsApp</span>
@@ -51,17 +51,17 @@
     <div class="max-w-[1140px] w-full px-gutter-desktop flex flex-col items-center">
       <!-- Subtle Format Metadata Header -->
       <div class="w-full flex items-center justify-between text-on-surface-variant mb-space-sm px-space-xs">
-        <div class="flex items-center gap-space-xs">
+        <!-- <div class="flex items-center gap-space-xs">
           <span class="material-symbols-outlined text-[16px] text-primary">visibility</span>
           <span class="font-label-sm text-label-sm uppercase tracking-wider">Arte Final Pronta para Divulgação
             Pública</span>
-        </div>
-        <span class="font-label-sm text-label-sm font-mono" id="canvas-aspect-hint">Formato: 1080 x 1080px
+        </div> -->
+        <span class="font-label-sm text-label-sm font-mono mb-2" id="canvas-aspect-hint">Formato: 1080 x 1080px
           (Instagram / Post)</span>
       </div>
       <!-- THE CANONICAL INSTITUTIONAL POSTER ARTWORK (Pixel-precise modern replica) -->
       <div
-        class="relative w-full max-w-[880px] bg-surface-container-lowest shadow-2xl rounded-none p-6 sm:p-10 md:p-14 overflow-hidden transition-all duration-300"
+        class="relative w-full max-w-[880px] bg-surface-container-lowest shadow-md rounded-none p-6 sm:p-10 md:p-14 overflow-hidden transition-all duration-300"
         id="exportable-artboard">
         <!-- Background Halftone Accent Motif - Top Right -->
         <div
@@ -107,10 +107,10 @@
             </p>
           </div>
           <!-- Master Golden Banner Ribbon -->
-          <div class="w-full bg-primary-container rounded-t-sm py-space-sm px-space-md text-center shadow-sm">
+          <div class="w-full bg-primary-container rounded-t-sm py-space-sm px-space-md text-center shadow-xs">
             <p
               class="font-headline-md text-headline-md text-on-primary-container font-extrabold uppercase tracking-wide">
-              Escala Referente ao Mês de Abril de 2026
+              Escala Referente ao Mês de Setembro de 2026
             </p>
           </div>
           <!-- Structured Schedule Grid (Exact match of layout, typography and duty rosters) -->
@@ -301,42 +301,62 @@
           </div>
           <!-- Bottom Institutional Footer Notice Blocks -->
           <div
-            class="mt-space-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md pt-space-sm">
-            <!-- Left: Emblem / Laboratory Brand -->
-            <div class="flex items-center gap-space-md">
-              <div class="w-[82px] h-[82px] rounded-full flex items-center justify-center p-2">
-                <div class="w-full h-full rounded-md flex items-center justify-center text-on-primary bg-blue-400">
-                  <img src="images/psyco-lab-removebg.png" alt="">
-                </div>
+            class="mt-space-xl p-space-lg  rounded-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg">
+            <div class="flex items-center gap-space-md w-full">
+
+              <!-- Logo -->
+              <div
+                class="w-14 h-14 rounded-full bg-surface-container-lowest shadow-md flex items-center justify-center text-primary flex-shrink-0">
+                <img src="images/logo-removebg.png" alt="Logo" class="w-10 h-10 object-contain" />
               </div>
-              <!-- <div class="flex flex-col">
-                    <span
-                      class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface font-extrabold leading-tight">
-                      Laboratório<br>de Psicologia
-                    </span>
-                    <span class="font-label-sm text-label-sm text-on-surface-variant font-bold">UCAN</span>
-                  </div> -->
-            </div>
-            <!-- Right: Quality Notice & Voluntary Recruitment Details -->
-            <div class="flex flex-col gap-1.5 max-w-[540px] text-left">
-              <div class="flex items-start gap-2">
-                <span class="inline-block w-2 h-2 rounded-full bg-primary-container mt-1.5 flex-shrink-0"></span>
-                <p class="font-body-sm text-body-sm text-on-surface leading-tight">
+
+              <!-- Texto -->
+              <div class="space-y-1 ml-6 mr-12 flex-1">
+
+                <p class="text-base text-black leading-snug">
+                  <span class="inline-block w-2 h-2 rounded-full bg-tertiary mr-1"></span>
+
                   Para garantir a qualidade dos atendimentos, qualquer irregularidade deve ser reportada através do
                   número:
-                  <strong class="font-label-lg text-label-lg text-on-surface font-black">923 820 314</strong>.
+
+                  <strong class="ml-1 font-extrabold">
+                    923 820 314
+                  </strong>.
                 </p>
-              </div>
-              <div class="flex items-start gap-2">
-                <span class="inline-block w-2 h-2 rounded-full bg-primary-container mt-1.5 flex-shrink-0"></span>
-                <p class="font-body-sm text-body-sm text-on-surface leading-tight">
+
+                <p class="text-base text-gray-700 leading-snug">
+                  <span class="inline-block w-2 h-2 rounded-full bg-primary mr-1"></span>
+
                   Para psicólogos voluntários, envie o seu CV, cópia do BI e certificado para:
-                  <strong
-                    class="font-label-md text-label-md text-tertiary font-bold">laboratorio.psicologia@ucan.edu</strong>
+
+                  <a class="ml-1 hover:underline font-bold" href="mailto:laboratorio.psicologia@ucan.edu">
+                    laboratorio.psicologia@ucan.edu
+                  </a>
                 </p>
+
               </div>
             </div>
+
+            <!-- Botões -->
+            <div class="flex flex-col sm:flex-row gap-space-sm w-full md:w-auto">
+              <a class="inline-flex items-center justify-center gap-space-sm px-space-md py-space-sm bg-surface-container-highest text-on-surface rounded hover:bg-surface-container transition-colors"
+                href="tel:923820314">
+                <span class="material-symbols-outlined text-[18px]">
+                  report
+                </span>
+                Reportar Linha
+              </a>
+
+              <a class="inline-flex items-center justify-center gap-space-sm px-space-md py-space-sm bg-primary-container text-on-primary-container rounded hover:bg-primary hover:text-on-primary transition-colors shadow-sm"
+                href="mailto:laboratorio.psicologia@ucan.edu?subject=Candidatura%20Psicologo%20Voluntario%20UCAN">
+                <span class="material-symbols-outlined text-[18px]">
+                  volunteer_activism
+                </span>
+                Quero ser Voluntário
+              </a>
+            </div>
           </div>
+
         </div>
       </div>
       <!-- Quick Export Settings Panel -->
@@ -350,7 +370,7 @@
           <div class="flex items-center gap-space-md">
             <div class="flex flex-col text-right">
               <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Mês Vigente</span>
-              <span class="font-label-lg text-label-lg text-primary font-bold">Abril 2026</span>
+              <span class="font-label-lg text-label-lg text-primary font-bold">Setembro 2026</span>
             </div>
             <div
               class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">

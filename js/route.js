@@ -98,6 +98,13 @@ async function loadPage() {
     currentModule = module;
     currentPage = page;
 
+    // Expor funções exportadas pelo módulo para onclick="..."
+    Object.entries(module).forEach(([name, value]) => {
+      if (name !== "init" && typeof value === "function") {
+        window[name] = value;
+      }
+    });
+
     // --------------------------------
     // 6. Inicializar página
     // --------------------------------

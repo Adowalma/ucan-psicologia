@@ -57,3 +57,5 @@ function downloadPNG() {
 function downloadPDF() {
   window.print();
 }
+
+export { showToast, switchFormat, downloadPNG, downloadPDF };
